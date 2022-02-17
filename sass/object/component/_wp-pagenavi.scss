@@ -1,0 +1,73 @@
+/* WP pabenavi ページネーション */
+.wp-pagenavi a {
+  font-size: rem(16);
+  line-height: 24px;
+  // padding: 0 rem(12);
+  padding: 0 rem(7);
+}
+
+.wp-pagenavi .previouspostslink {
+  letter-spacing: rem(2);
+  padding: 0 rem(12) 0 rem(11);
+  margin-right: rem(24);
+  margin-left: 0;
+}
+.wp-pagenavi .nextpostslink {
+  letter-spacing: rem(2);
+  padding: 0 rem(11);
+  margin-left: rem(22);
+}
+.wp-pagenavi .page,
+.wp-pagenavi span.current {
+  margin-left: rem(15);
+}
+.wp-pagenavi .page,
+.wp-pagenavi span {
+  margin-right: 0;
+}
+.wp-pagenavi .page.smaller {
+  margin-left: 0;
+}
+.wp-pagenavi .page.larger:last-of-type {
+  margin-right: 0;
+}
+
+// 現在のページ
+.wp-pagenavi span.current {
+  font-size: rem(16);
+  font-weight: normal;
+  color: #333;
+  background-color: #F9F871;
+  border-color: #F9F871;
+  // padding: 0 rem(12);
+  padding: 0 rem(7);
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .page,
+.wp-pagenavi span{
+  transition: color .3s, background-color .3s, border-color .3s;
+}
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover,
+.wp-pagenavi .page:hover,
+.wp-pagenavi span:hover {
+  color: #333;
+  background-color: #F9F871;
+  border-color: #F9F871;
+}
+
+// お知らせ 現在のページ
+.p-sub-products-archive__pageNavi .wp-pagenavi span.current {
+  background-color: #FFF;
+  border-color: #FFF;
+}
+.p-sub-products-archive__pageNavi .wp-pagenavi .previouspostslink:hover,
+.p-sub-products-archive__pageNavi .wp-pagenavi .nextpostslink:hover,
+.p-sub-products-archive__pageNavi .wp-pagenavi .page:hover,
+.p-sub-products-archive__pageNavi .wp-pagenavi span:hover {
+  // color: #333;
+  background-color: #FFF;
+  border-color: #FFF;
+}

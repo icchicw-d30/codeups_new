@@ -1,0 +1,35 @@
+// 色
+$background: #111; // 背景
+$text-color: #fff; // テキスト色
+
+// マウスホバー
+$opacity: 0.7; // 透過度
+
+// フォント
+$font-family-base: 'Noto Sans JP', sans-serif;// ベースフォント
+$font-family-sub: 'Noto Serif JP', serif;// ベースフォント
+$font-size-base: 16px; // ベースフォントサイズ
+$font-weight-base: 400; // ベースフォントウェイト
+$lh: 1.6; // ベース行間
+
+// ---
+// レイアウト
+// ---
+$l-md: 768px; // タブレットサイズ
+$l-inner: 1000px; // インナー幅
+$l-pc: 1440px; // パソコン幅
+
+// ブレークポイント（PC基準）
+$breakpoints: (
+	"sp": "screen and (min-width: 375px)",
+	"md": "screen and (min-width: #{$l-md})",
+	"pc": "screen and (min-width: #{$l-inner})",
+	"lg": "screen and (min-width: #{$l-pc})",
+
+);
+
+
+
+
+$padding-pc: 25px; // タブレット時の余白
+$padding-sp: 20px; // スマホ時の余白

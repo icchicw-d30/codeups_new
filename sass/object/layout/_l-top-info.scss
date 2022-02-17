@@ -1,0 +1,8 @@
+.l-top-info {
+  padding-top: rem(28);
+  padding-bottom: rem(100);
+  @include mq(md) {
+    padding-top: rem(32);
+    padding-bottom: rem(144);
+  }
+}

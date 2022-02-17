@@ -1,0 +1,9 @@
+.l-top-blog {
+  padding-top: rem(27);
+  padding-bottom: rem(121);
+
+  @include mq(md) {
+    padding-top: rem(142);
+    padding-bottom: rem(150);
+  }
+}

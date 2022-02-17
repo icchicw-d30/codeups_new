@@ -1,0 +1,8 @@
+.l-blog-detail-relation {
+  padding-top: rem(116);
+  padding-bottom: rem(120);
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(150);
+  }
+}

@@ -1,0 +1,189 @@
+.p-news-detail__inner.l-inner {
+  @include mq(md) {
+    max-width: rem(850);
+    width: 100%;
+  }
+}
+
+.p-news-detail__title {
+  font-size: rem(20);
+  line-height: calc( 35 / 20 );
+  letter-spacing: calc( 0.4 / 20 *1rem );
+  margin-top: rem(78);
+}
+
+.p-news-detail__head {
+  display: flex;
+  align-items: center;
+  margin-top: rem(16);
+}
+
+.p-news-detail__tag {
+  margin-left: rem(24);
+}
+
+
+.p-news-detail__thumbnail {
+  position: relative;
+  margin: rem(16) calc(50% - 50vw) 0;
+	width: 100vw;
+  @include mq(md) {
+    margin: initial;
+    width: initial;
+    margin-top: rem(32);
+  }
+}
+
+.p-news-detail__thumbnail::before {
+  content: '';
+  display: block;
+  padding-top: calc( 251 / 375 * 100%);
+  @include mq(md) {
+    padding-top: 66.239316%;
+  }
+}
+
+.p-news-detail__thumbnail img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-news-detail__content {
+
+}
+
+/* 以下のクラスはjsで付与 */
+.p-news-detail__p {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+.p-news-detail__p p {
+  font-size: rem(16);
+  line-height: calc(35 / 16);
+  letter-spacing: calc(0.4 / 16 * 1em);
+}
+
+.p-news-detail__h2 {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+.p-news-detail__h2 h2{
+  font-size: rem(20);
+  line-height: 1;
+  letter-spacing: calc( 2 / 24 * 1rem);
+  padding: rem(5) 0 rem(5) rem(9);
+  position: relative;
+}
+.p-news-detail__h2 h2::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #C4C4C4;
+  width: rem(3);
+  height: 100%;
+}
+
+.p-news-detail__h3 {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+.p-news-detail__h3 h3{
+  font-size: rem(18);
+  letter-spacing: calc( 2 / 18 * 1rem);
+  display: inline-block;
+  position: relative;
+}
+.p-news-detail__h3 h3::after{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: rem(3);
+  background: linear-gradient(to left, #FFF, #FFF 67%, #FFEA2E 67%, #FFEA2E 100%);
+  left: 0;
+  bottom: rem(-3);
+}
+
+
+
+.p-news-detail__img {
+  position: relative;
+  margin: rem(24) calc(50% - 50vw) 0;
+	width: 100vw;
+  @include mq(md) {
+    margin: rem(32) 0 0;
+    width: initial;
+  }
+}
+
+.p-news-detail__img::before {
+  content: '';
+  display: block;
+  padding-top: calc( 251 / 375 * 100%);
+  @include mq(md) {
+    padding-top: 66.239316%;
+  }
+}
+
+.p-news-detail__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-news-detail__items {
+  list-style: inside;
+  list-style-type: disc;
+  font-size: rem(16);
+  line-height: calc( 35 / 16);
+  letter-spacing: calc( 0.4 / 16 * 1rem);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-news-detail__order-items {
+  list-style: inside;
+  list-style-type: decimal;
+  font-size: rem(16);
+  line-height: calc( 35 / 16);
+  letter-spacing: calc( 0.4 / 16 * 1rem);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+/* ↑↑↑jsで付与したクラスここまで↑↑↑ */
+
+
+.p-news-detail__nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(104);
+  }
+}
+

@@ -1,0 +1,22 @@
+.c-section-line-toLeft {
+  position: absolute;
+  background-color: #F9F871;
+  height: 3px;
+  background-size: calc(776 / 375 * 100vw);
+  width: 100%;
+  // top: -55%;
+  // left: -13%;
+  top: 114%;
+  right: 0;
+  // bottom: rem(-210);
+  transform: skewY(-74.2deg);
+  z-index: -1;
+
+  @include mq(md) {
+    height: rem(1);
+    top: initial;
+    // bottom: -81%;
+    bottom: -51%;
+    transform: skewY(-45deg);
+  }
+}

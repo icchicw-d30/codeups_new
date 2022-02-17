@@ -1,0 +1,49 @@
+.p-contact {
+  background-color: #3D3D3D
+}
+
+.p-contact__inner {
+  padding: 0 rem(20);
+  @include mq(md) {
+    max-width: rem(1280);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.p-contact__title.c-section-title {
+  @include mq(md) {
+    letter-spacing: rem(2);
+  }
+}
+
+.p-contact__subtitle {
+  @include mq(md) {
+    top: initial;
+    bottom: rem(-22);
+    left: rem(70);
+  }
+}
+
+.p-contact__body {
+  font-size: rem(16);
+  letter-spacing: rem(2);
+  // line-height: calc(76 / 3 / 16);
+  line-height: calc(23 / 16);
+  margin-top: rem(18);
+
+  @include mq(md) {
+    text-align: center;
+    line-height: calc(23 / 16);
+    margin-top: rem(29);
+    margin-left: rem(15);
+  }
+}
+
+.p-contact__btn {
+  margin-top: rem(47);
+  @include mq(md) {
+    margin-top: rem(55);
+  }
+}

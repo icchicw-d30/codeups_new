@@ -1,0 +1,11 @@
+.c-term {
+  background-color: $background;
+  font-size: rem(16);
+  line-height: calc( 23 / 16 );
+  letter-spacing: calc( 2 / 16 * 1rem );
+  color: #FFF;
+  padding: rem(9) rem(19);
+  @include mq(md) {
+    padding: rem(9) rem(20);
+  }
+}

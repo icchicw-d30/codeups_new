@@ -1,0 +1,9 @@
+.l-top-overview {
+  padding-top: rem(50);
+  // padding-bottom: rem(70);
+
+  @include mq(md) {
+    padding-top: rem(54);
+    padding-bottom: rem(151);
+  }
+}

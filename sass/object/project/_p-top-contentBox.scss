@@ -1,0 +1,240 @@
+.p-top-contentBox {
+  margin-top: rem(46);
+  background-color: #333;
+
+  // @include mq(md) {
+  //   position: relative;
+  //   padding-top: 42.96875%;
+  //   background-color: initial;
+  //   padding-top: rem(550);
+  // }
+
+  @include mq(md) {
+    display: flex;
+    background-color: initial;
+    // position: relative;
+  }
+}
+
+.p-top-contentBox__items {
+
+}
+
+.p-top-contentBox__item {
+  width: 100%;
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.p-top-contentBox__image {
+  width: 100%;
+  position: relative;
+  // @include mq(md) {
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-43%);
+  //   width: 43.515625%;
+  //   height: 70.72842%;
+  //   z-index: 2;
+  //   right: 7.03125%;
+  // }
+
+  @include mq(md) {
+    // width: 43.515625%;
+    max-width: rem(557);
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+.p-top-contentBox__image--reverse {
+  // @include mq(md) {
+  //   right: initial;
+  //   left: 7.03125%;
+  // }
+}
+
+.p-top-contentBox__image::before {
+  padding-top: 69.7861%; // 261 // 374
+  display: block;
+  content: '';
+  @include mq(md) {
+    
+    padding-top: calc( 389 / 557 * 100%);
+  }
+}
+.p-top-contentBox__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  // @include mq(md) {
+  //   height: initial;
+  //   max-height: rem(389);
+  // }
+}
+
+.p-top-contentBox__box {
+  margin-top: rem(24);
+  padding: 0 rem(20) rem(20);
+  z-index: 0;
+  // @include mq(md) {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 70%;
+  //   height: 100%;
+  //   background-color: #333;
+  //   padding-top: 9.375%;
+  //   padding-bottom: 9.375%;
+  //   padding-left: 7.03125%;
+  // }
+
+  @include mq(md) {
+    max-width: rem(510);
+    width: 100%;
+    padding: initial;
+    margin-left: rem(34);
+    margin-top: rem(29);
+    // margin-top: auto;
+    // margin-bottom: auto;
+    // position: relative;
+  }
+}
+
+.p-top-contentBox::before {
+  @include mq(md) {
+    // position: absolute;
+    // content: '';
+    // background: #333;
+    // width: 70%;
+    // height: 101%;
+    // top: 50%;
+    // right: 0;
+    // transform: translateY(-36%);
+
+  // width: rem(896);
+  // width: 81.454545%;
+  // height: rem(550);
+  // height: 141.388175%;
+  // top: rem(-80);
+  // right: rem(-90);
+  // z-index: -1;
+  }
+}
+
+.p-top-contentBox__title {
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  line-height: calc(29 / 20);
+  text-align: center;
+  margin-left: rem(19);
+  @include mq(md) {
+    text-align: left;
+    font-size: rem(25);
+    letter-spacing: rem(0.5);
+    margin-left: initial;
+  }
+}
+
+.p-top-contentBox__body {
+  font-size: rem(16);
+  margin-top: rem(22);
+  letter-spacing: rem(2);
+  line-height: calc(163 / 7 / 16);
+
+  @include mq(md) {
+    margin-top: rem(38);
+    line-height: calc(35 / 16);
+    letter-spacing: rem(0.5);
+  }
+}
+.p-top-contentBox__body--reverse {
+  // @include mq(md) {
+  //   width: 100%;
+  // }
+}
+
+.p-top-contentBox__btn {
+  margin-top: rem(26);
+
+  @include mq(md) {
+    margin-top: rem(48);
+  }
+}
+
+.p-top-contentBox__btn .c-btn {
+  @include mq(md) {
+    margin-left: initial;
+  }
+}
+
+.p-top-contentBox--reverse {
+  @include mq(md) {
+    margin-top: rem(118);
+    // padding: 0 rem(90);
+    flex-direction: row-reverse;
+  }
+}
+
+.p-top-contentBox--reverse::before {
+  @include mq(md) {
+    right: initial;
+    left: 0;
+  }
+}
+
+.p-top-contentBox__box--reverse {
+  margin-left: initial;
+  @include mq(md) {
+    
+    margin-right: rem(33);
+  }
+}
+
+// swiperページネーションを領域外で表示させるため
+.p-top-contentBox .swiper {
+  @include mq(md) {
+    position: initial;
+  }
+}
+// swiperページネーションの位置
+.swiper-pagination.p-top-contentBox__pagination {
+  // top: calc(257 / 585 * 100%);
+  top: calc(252 / 585 * 100%);
+  @include mq(md) {
+    // top: initial;
+    // bottom: rem(-24);
+    top: calc(393 / 388 * 100%);
+    left: 26%;
+    // transform: translateX(-50%);
+    width: initial;
+  }
+}
+
+// swiperページネーションの横位置調整
+.swiper-pagination.p-top-contentBox__pagination.swiper-pagination-bullets {
+  left: rem(-2);
+  @include mq(md) {
+    left: 25%;
+  }
+}
+// swiperページネーションの色とマージン
+.swiper-pagination.p-top-contentBox__pagination .swiper-pagination-bullet {
+  background: #C4C4C4;
+  margin: 0 rem(5);
+  @include mq(md) {
+    margin: 0 rem(5.4);
+  }
+}
+// swiperページネーションのアクティブ色
+.swiper-pagination.p-top-contentBox__pagination .swiper-pagination-bullet-active {
+  background: #F9F871;
+}
+
+

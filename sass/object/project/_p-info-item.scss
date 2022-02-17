@@ -1,0 +1,59 @@
+.p-info-item {
+  @include mq(md) {
+    // display: flex;
+    // align-items: center;
+  }
+}
+
+.p-info-item__link {
+  @include mq(md) {
+    // display: flex;
+    // align-items: center;
+    // align-items: baseline;
+  }
+}
+
+.p-info-item__head {
+  display: flex;
+  align-items: center;
+  margin-bottom: auto;
+}
+
+.p-info-item__date {
+//   width: rem(80);
+}
+
+.p-info-item__tag {
+  // letter-spacing: 0.0226em;
+  margin-left: rem(32);
+  @include mq(md) {
+    margin-left: rem(48);
+    word-break: keep-all; //改行禁止
+  }
+}
+
+.p-info-item__title {
+  margin-top: rem(14);
+  line-height: calc(23 / 16);
+  letter-spacing: 0;
+  // display: inline;
+
+  padding-bottom: .25em;
+  transition: background .4s;
+  background: linear-gradient(#FFF, #FFF) 0 100%/0 2px no-repeat;
+  @include mq(md) {
+    // width: calc(572 / 860 * 100%);
+    margin-top: 0;
+    margin-left: rem(61);
+  }
+}
+.p-info-item__title span {
+  padding-bottom: rem(1);
+  transition: background .4s;
+  background: linear-gradient(#FFF, #FFF) 0 100%/0 1px no-repeat;
+}
+.p-info-item__title:hover span {
+  background-size: 100% 1px;
+  transition: .3s;
+}
+

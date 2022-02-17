@@ -1,0 +1,8 @@
+.l-sub-notfound{
+  padding-top: rem(130);
+  padding-bottom: rem(122);
+  @include mq(md) {
+    padding-top: rem(193);
+    padding-bottom: rem(149);
+  }
+}

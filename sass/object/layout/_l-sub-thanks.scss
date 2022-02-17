@@ -1,0 +1,8 @@
+.l-sub-thanks {
+  padding-top: rem(130);
+  padding-bottom: rem(122);
+  @include mq(md) {
+    padding-top: rem(201);
+    padding-bottom: rem(150);
+  }
+}

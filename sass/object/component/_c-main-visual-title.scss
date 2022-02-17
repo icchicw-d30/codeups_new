@@ -1,0 +1,8 @@
+.c-main-visual-title {
+  font-size: rem(28);
+  letter-spacing: rem(0.5);
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(50);
+  }
+}

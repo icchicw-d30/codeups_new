@@ -1,0 +1,8 @@
+.l-sub-news {
+  padding-top: rem(82);
+  padding-bottom: rem(120);
+  @include mq(md) {
+    padding-top: rem(66);
+    padding-bottom: rem(150);
+  }
+}

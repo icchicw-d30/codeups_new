@@ -1,0 +1,18 @@
+.p-sub-contact {
+
+}
+
+.p-sub-contact__inner.l-inner {
+
+}
+
+.p-sub-contact__form{
+  margin-top: rem(30);
+  @include mq(md) {
+    max-width: rem(696);
+    width: 100%;
+    margin-top: rem(62);
+    margin-left: 5%;
+    margin-right: auto;
+  }
+}

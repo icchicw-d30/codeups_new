@@ -1,0 +1,41 @@
+.c-hamburger {
+  z-index: 999;
+  cursor: pointer;
+}
+
+.c-hamburger span {
+  position: relative;
+  display: block;
+  background: #fff;
+  height: rem(2);
+  width: rem(26);
+  transition: ease .5s;
+}
+.c-hamburger span:nth-child(1) {
+  top: 0;
+}
+.c-hamburger span:nth-child(2) {
+  margin: rem(5) 0;
+}
+.c-hamburger span:nth-child(3) {
+  top: 0;
+}
+
+/* OPEN時の動き */
+.c-hamburger.open span:nth-child(1) {
+  top: 6px;
+  top: rem(6);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.c-hamburger.open span:nth-child(2) {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.c-hamburger.open span:nth-child(3) {
+  top: -8px;
+  top: rem(-8);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

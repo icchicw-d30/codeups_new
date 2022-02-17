@@ -1,0 +1,6 @@
+.l-sub-profile {
+  padding-bottom: rem(120);
+  @include mq(md) {
+    padding-bottom: rem(150);
+  }
+}

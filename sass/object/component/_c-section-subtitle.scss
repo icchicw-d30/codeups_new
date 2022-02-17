@@ -1,0 +1,36 @@
+.c-section-subtitle {
+  font-size: rem(50);
+  font-weight: normal;
+  text-transform: capitalize;
+  color: rgba($color: #f9f871, $alpha: 0.2);
+  font-family: $font-family-sub;
+  letter-spacing: rem(2);
+  position: absolute;
+  top: rem(-52);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq(md) {
+    font-size: rem(110);
+    // top: rem(-41);
+    top: initial;
+    left: rem(90);
+    height: rem(158);
+    transform: initial;
+  }
+}
+
+.c-section-subtitle.--contact {
+  top: rem(-51);
+  @include mq(md) {
+    top: initial;
+  }
+}
+
+.c-section-subtitle--reverse {
+  @include mq(md) {
+    left: initial;
+    // right: 0;
+    right: rem(90)
+  }
+}

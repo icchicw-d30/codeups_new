@@ -1,0 +1,16 @@
+.p-blog-detail-relation {
+
+}
+
+.p-blog-detail-relation__wrapper {
+  // margin-top: rem(120);
+}
+
+.p-blog-detail-relation__inner.l-inner {
+  @include mq(md) {
+    max-width: rem(1150);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

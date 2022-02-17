@@ -1,0 +1,31 @@
+.p-top-content {
+  position: relative;
+}
+
+.p-top-content__inner {
+  max-width: rem(1280);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-top-content__subtitle {
+  @include mq(md) {
+    bottom: rem(-69);
+  }
+}
+
+.p-top-content__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: rem(45);
+  @include mq(md) {
+    margin-top: rem(48);
+  }
+}
+.p-top-content__item {
+  width: 50%;
+  @include mq(md) {
+    width: 25%;
+  }
+}

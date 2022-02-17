@@ -1,0 +1,24 @@
+.c-section-title {
+  font-weight: normal;
+  font-size: rem(25);
+  letter-spacing: rem(2);
+
+  @include mq(md) {
+    font-size: rem(30);
+    letter-spacing: rem(0.5);
+    line-height: calc(35 / 30);
+  }
+}
+.c-section-title.c-section-title--top {
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+.c-section-title.c-section-title--content {
+  font-size: rem(25);
+  @include mq(md) {
+    letter-spacing: rem(2);
+  }
+}

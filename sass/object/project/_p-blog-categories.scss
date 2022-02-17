@@ -1,0 +1,105 @@
+.p-blog-categories {
+  margin-top: rem(78);
+  @include mq(md) {
+    margin-top: rem(110);
+  }
+}
+
+.p-blog-categories__inner {
+  padding: 0 rem(20);
+  display: flex;
+  align-items: center;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    padding: 0 rem(20);
+    max-width: rem(1140);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.p-blog-categories__all {
+  display: inline-block;
+  padding: rem(5) rem(7);
+  padding: rem(2) rem(9);
+
+  text-align: center;
+  letter-spacing: rem(2);
+  transition: background-color .3s, color .3s;
+  // max-width: rem(60);
+  // width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.p-blog-categories__all.p-blog-categories__all--current {
+  background-color: #fff;
+  color: #333;
+  padding: rem(3) rem(7) rem(4);
+  // margin-top: rem(4);
+  @include mq(md) {
+    padding: rem(2) rem(9);
+    // margin-top: initial;
+  }
+}
+.p-blog-categories__all:hover {
+  background-color: #fff;
+  color: #333;
+
+}
+
+.p-blog-categories__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: rem(-12);
+  margin-right: rem(-12);
+  @include mq(md) {
+    margin-left: rem(-20);
+    margin-right: rem(-20);
+    // margin-top: 0;
+    // margin-left: rem(50);
+  }
+}
+
+.p-blog-categories__item {
+  // margin-left: rem(24);
+  letter-spacing: rem(2);
+  padding-left: rem(12);
+  padding-right: rem(12);
+  margin-bottom: rem(12);
+  @include mq(md) {
+    padding-left: rem(20);
+    padding-right: rem(20);
+    // margin-left: rem(40);
+  }
+}
+.p-blog-categories__item + .p-blog-categories__item {
+  // margin-left: rem(19);
+  @include mq(md) {
+    // margin-left: rem(40);
+  }
+}
+
+
+.p-blog-categories__item a{
+  display: inline-block;
+  padding: rem(4) rem(0);
+  // margin-right: rem(24);
+  transition: background-color .3s, color .3s;
+  @include mq(md) {
+    letter-spacing: rem(2);
+    padding: rem(4) rem(0);
+    // margin-left: rem(40);
+  }
+}
+
+.p-blog-categories__item a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.p-blog-categories__item.p-blog-categories__item--current a {
+  background-color: #fff;
+  color: #333;
+}

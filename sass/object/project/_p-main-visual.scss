@@ -1,0 +1,88 @@
+/* 画像切り替えアニメーション */
+@keyframes mvAnimation {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.p-main-visual {
+  position: relative;
+  height: 100vh;
+  // z-index: -99;
+}
+
+.p-main-visual__image {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+
+  position: relative;
+  // z-index: 1;
+}
+
+/* 画像切り替えアニメーション */
+.p-main-visual__item.swiper-slide.swiper-slide-active .p-main-visual__image img{
+  opacity: 0;
+  animation: mvAnimation 8s ease-out forwards;/* アニメーションの長さはswiperの設定より少し大きくしておく */
+}
+// 画像マスク
+.p-main-visual__image::before {
+  position: absolute;
+  content: '';
+  background-color: rgba($color: #111, $alpha: 0.2);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+}
+// メインビジュアルに黄色の背景線を表示させないための黒背景
+.p-main-visual__image::after {
+  position: absolute;
+  content: '';
+  background-color: rgba($color: #111, $alpha: 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.p-main-visual__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.p-main-visual__block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  // transform: translate(-50%, -50%);
+  transform: translate(-50%, -25%);
+  padding: 0 rem(16);
+  text-align: center;
+  z-index: 1;
+  @include mq(md) {
+    transform: translate(-50%, -40%);
+    
+  }
+}

@@ -1,0 +1,20 @@
+.c-section-line-toRight {
+  position: absolute;
+  background-color: #F9F871;
+  height: 2px;
+  width: 100%;
+  background-size: calc(776 / 375 * 100vw);
+  top: 70%;
+  right: 0;
+  // left: 0;
+  // bottom: rem(-210);
+  transform: skewY(63.9deg);
+
+  @include mq(md) {
+    background-size: calc(1190 / 1280 * 100vw);
+    top: 96%;
+    transform: skewY(45deg);
+    z-index: -1;
+    height: 1px;
+  }
+}

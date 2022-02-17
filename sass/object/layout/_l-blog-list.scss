@@ -1,0 +1,7 @@
+.l-blog-list {
+  padding-top: rem(22);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-bottom: rem(147);
+  }
+}

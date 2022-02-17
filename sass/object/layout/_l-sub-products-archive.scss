@@ -1,0 +1,7 @@
+.l-sub-products-archive {
+  // padding-top: rem(16);
+  padding-bottom: rem(118);
+  @include mq(md) {
+    padding-bottom: rem(120);
+  }
+}

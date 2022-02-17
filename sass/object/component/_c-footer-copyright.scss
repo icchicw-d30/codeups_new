@@ -1,0 +1,9 @@
+.c-footer-copyright {
+  font-size: rem(11);
+  letter-spacing: rem(1.2);
+  line-height: 1;
+
+  @include mq(md) {
+    font-size: rem(15);
+  }
+}

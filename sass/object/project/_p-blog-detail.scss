@@ -1,0 +1,282 @@
+.p-blog-detail__inner.l-inner {
+  margin-top: rem(75);
+
+  @include mq(md) {
+    max-width: rem(850);
+    width: 100%;
+    margin-top: rem(82);
+  }
+}
+
+.p-blog-detail__title {
+  font-size: rem(20);
+  line-height: calc( 35 / 20 );
+  // letter-spacing: calc( 0.4 / 20 *1rem );
+  letter-spacing: rem(0.4);
+  @include mq(md) {
+    font-size: rem(23);
+    letter-spacing: rem(0.4);
+    line-height: calc( 35 / 23 );
+  }
+}
+
+.p-blog-detail__head {
+  display: flex;
+  align-items: center;
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(34);
+  }
+}
+
+.p-blog-detail__date {
+  letter-spacing: rem(0.4);
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: rem(0.4);
+  }
+}
+
+.p-blog-detail__tag {
+  margin-left: rem(24);
+}
+.p-blog-detail__tag.c-tag {
+  font-size: rem(16);
+  letter-spacing: rem(2);
+  line-height: calc(23 / 16);
+  padding: rem(7) rem(18) rem(9);
+  @include mq(md) {
+    font-size: rem(16);
+    padding: rem(7) rem(18);
+    margin-top: rem(-3);
+  }
+}
+
+.p-blog-detail__thumbnail {
+  position: relative;
+  margin: rem(16) calc(50% - 50vw) 0;
+	width: 100vw;
+  @include mq(md) {
+    margin: initial;
+    width: initial;
+    margin-top: rem(32);
+  }
+}
+
+.p-blog-detail__thumbnail::before {
+  content: '';
+  display: block;
+  padding-top: calc( 251 / 375 * 100%);
+  @include mq(md) {
+    padding-top: 66.239316%;
+    padding-top: calc( 427 / 799 * 100%);
+  }
+}
+
+.p-blog-detail__thumbnail img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-blog-detail__content {
+
+}
+
+/* 以下のクラスはjsで付与 */
+.p-blog-detail__p {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+.p-blog-detail__p p {
+  font-size: rem(16);
+  line-height: calc(35 / 16);
+  letter-spacing: rem(0.4);
+}
+
+.p-blog-detail__h2 {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+.p-blog-detail__h2 h2{
+  font-size: rem(20);
+  line-height: 1;
+  letter-spacing: rem(2);
+  padding: rem(5) 0 rem(5) rem(9);
+  position: relative;
+  @include mq(md) {
+    padding: rem(5) 0 rem(5) rem(8);
+  }
+}
+.p-blog-detail__h2 h2::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #C4C4C4;
+  width: rem(3);
+  height: 100%;
+  @include mq(md) {
+    left: rem(2);
+  }
+}
+
+.p-blog-detail__h3 {
+  margin-top: rem(22);
+  @include mq(md) {
+    margin-top: rem(32);
+    margin-left: rem(8);
+  }
+}
+.p-blog-detail__h3 h3{
+  font-size: rem(18);
+  letter-spacing: rem(2);
+  display: inline-block;
+  position: relative;
+  margin-left: rem(9);
+  @include mq(md) {
+    margin-left: initial;
+  }
+}
+.p-blog-detail__h3 h3::after{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: rem(3);
+  background: linear-gradient(to left, #FFF, #FFF 67%, #FFEA2E 67%, #FFEA2E 100%);
+  left: 0;
+  bottom: rem(-3);
+  @include mq(md) {
+    bottom: rem(-1);
+  }
+}
+
+
+
+.p-blog-detail__img {
+  position: relative;
+  margin: rem(24) calc(50% - 50vw) 0;
+	width: 100vw;
+  @include mq(md) {
+    margin: rem(32) 0 0;
+    width: initial;
+  }
+}
+
+.p-blog-detail__img::before {
+  // content: '';
+  // display: block;
+  // padding-top: calc( 251 / 375 * 100%);
+  // @include mq(md) {
+  //   padding-top: calc( 427 / 799 * 100%);
+  // }
+}
+
+.p-blog-detail__img img {
+  // position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // object-fit: cover;
+  // object-position: center;
+}
+
+.p-blog-detail__items {
+  // list-style: inside;
+  // list-style-type: disc;
+  font-size: rem(16);
+  line-height: calc( 35 / 16);
+  letter-spacing: calc( 0.4 / 16 * 1rem);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-blog-detail__items li {
+  
+  position: relative;
+  @include mq(md) {
+    padding-left: rem(17);
+  }
+}
+.p-blog-detail__items li span {
+  padding-left: rem(17);
+}
+.p-blog-detail__items li::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 2px;
+  background: #FFF;
+  left: rem(7);
+  top: rem(17);
+  @include mq(md) {
+    left: rem(8);
+    
+  }
+}
+
+.p-blog-detail__order-items {
+  counter-reset: number 0;           /* number のカウンタを 0 にセット */
+
+  // list-style: inside;
+  // list-style-type: decimal;
+
+  font-size: rem(16);
+  line-height: calc( 35 / 16);
+  letter-spacing: rem(0.4);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.p-blog-detail__order-items li {
+  position: relative;
+  
+  @include mq(md) {
+    padding-left: rem(17);
+  }
+}
+.p-blog-detail__order-items li span {
+  padding-left: rem(17);
+}
+.p-blog-detail__order-items li::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: rem(4);
+  top: 0;
+  // transform: translateY(-50%);
+  counter-increment: number 1;  /* number カウンタの増加数をセット */
+  content: counter(number); /* 表示形式を指定 */
+}
+/* ↑↑↑jsで付与したクラスここまで↑↑↑ */
+
+
+.p-blog-detail__nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
+

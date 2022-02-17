@@ -1,0 +1,9 @@
+.c-main-visual-subtitle {
+  font-size: rem(20);
+  letter-spacing: rem(0.5);
+  line-height: 1;
+  margin-top: rem(24);
+  @include mq(md) {
+    font-size: rem(25);
+  }
+}

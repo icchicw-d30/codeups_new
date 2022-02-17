@@ -1,0 +1,22 @@
+.p-sub-news {
+
+}
+
+.p-sub-news__inner.l-inner {
+  @include mq(md) {
+    max-width: rem(910);
+    width: 100%;
+  }
+}
+
+.p-sub-news__items {
+  
+}
+
+.p-sub-news__item {
+
+}
+
+.p-sub-news__item + .p-sub-news__item {
+  margin-top: rem(33);
+}

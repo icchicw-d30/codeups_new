@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/**
+ *
+ * 管理画面編集用scss
+ * .post-type-post で投稿を指定
+ *
+ **/
+.post-type-post .editor-styles-wrapper,
+.post-type-news .editor-styles-wrapper {
+  background-color: #555;
+  color: #FFF;
+}
+
+.post-type-post .editor-styles-wrapper h2,
+.post-type-news .editor-styles-wrapper h2 {
+  font-size: 20px;
+  letter-spacing: calc( 2 / 24 * 1rem);
+  line-height: 1;
+  padding: 5px 0 5px 9px;
+  position: relative;
+}
+
+.post-type-post .editor-styles-wrapper h2::before,
+.post-type-news .editor-styles-wrapperh2::before {
+  background: #C4C4C4;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+}
+
+.post-type-post .editor-styles-wrapper h3,
+.post-type-news .editor-styles-wrapper h3 {
+  display: block;
+  font-size: 18px;
+  letter-spacing: calc( 2 / 18 * 1rem);
+  position: relative;
+}
+
+.post-type-post .editor-styles-wrapper h3::after,
+.post-type-news .editor-styles-wrapper h3::after {
+  background: linear-gradient(to left, #FFF, #FFF 67%, #FFEA2E 67%, #FFEA2E 100%);
+  content: '';
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 28px;
+  width: 100%;
+}
+
+#adminmenu li.menu-top.toplevel_page_wp-menu-separator3 {
+  height: 1px;
+  margin-top: 10px;
+  max-height: 1px;
+  min-height: initial;
+}
+
+/* MVスライダーのレイアウト調整 */
+/* 事業内容ページ 繰り返し3つ目の＋ボタン消去 ※nth-childの値は場合により変動します！ */
+#smart-cf-custom-field-316 .smart-cf-meta-box .smart-cf-meta-box-repeat-tables .smart-cf-meta-box-table:nth-child(5) .dashicons-plus-alt.smart-cf-repeat-btn {
+  display: none;
+}
+
+/* 制作実績ページ 繰り返し8つ目の＋ボタン消去 ※nth-childの値は場合により変動します！ */
+#smart-cf-custom-field-121 .smart-cf-meta-box .smart-cf-meta-box-repeat-tables .smart-cf-meta-box-table:nth-child(10) .dashicons-plus-alt.smart-cf-repeat-btn {
+  display: none;
+}
+
+/* 事業内容 管理画面SCF繰り返しフィールドの上に追加した要素 */
+.c-scf-attention {
+  background-color: rgba(249, 249, 113, 0.7);
+  font-size: 20px;
+  margin-top: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.c-scf-attention span {
+  display: inline-block;
+}
+
+/* 画像フレックス */
+@media screen and (min-width: 768px) {
+  .smart-cf-field-type-image__wrapper {
+    display: flex;
+  }
+}
+
+/* デフォルトで左側にあるサブタイトル **myadmin.jsで位置とタグ変更済み** */
+.toplevel_page_mv_slider__subtitle {
+  font-size: 14px;
+  font-size: rem(100);
+  font-weight: bold;
+}

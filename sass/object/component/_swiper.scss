@@ -1,0 +1,43 @@
+.p-sub-products__gallery {
+
+  // 既存のアローボタンを消去
+  .swiper-button-prev::after {
+    content: '';
+  }
+  .swiper-button-next::after {
+    content: '';
+  }
+
+
+  // アローボタンを画像に置き換え
+  .swiper-button-prev {
+    background: url(../img/common/swiper-arrow-left.png) no-repeat center center / contain;
+    left: rem(8);
+  }
+  .swiper-button-next {
+    background: url(../img/common/swiper-arrow-right.png) no-repeat center center / contain;
+    right: rem(8);
+  }
+
+  // アローボタンのサイズ
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: rem(30);
+    height: rem(30);
+    border-radius: 50%;
+    transform: translateY(20%);
+    transition: opacity .3s;
+    @include mq(md) {
+      width: rem(50);
+      height: rem(50);
+      background-size: auto;
+      transform: initial;
+    }
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    opacity: .8
+  }
+
+}

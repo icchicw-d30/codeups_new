@@ -1,0 +1,8 @@
+.l-footer {
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+  @include mq(md) {
+    padding-top: rem(33);
+    padding-bottom: rem(29);
+  }
+}

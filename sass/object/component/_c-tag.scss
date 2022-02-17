@@ -1,0 +1,22 @@
+.c-tag {
+  font-size: rem(14);
+  // letter-spacing: calc( 2 / 16 * 1rem);
+  letter-spacing: 0;
+  line-height: calc(20 / 14);
+  background-color: #111;
+  border: 1px solid #fff;
+  padding: rem(4) rem(20) rem(5);
+  text-align: center;
+  // max-width: rem(100);
+  // width: 100%;
+  
+  @include mq(md) {
+    font-size: rem(14);
+    padding: rem(4) rem(21);
+    // padding-left: initial;
+    // padding-right: initial;
+    // padding-top: rem(3);
+    // padding-bottom: rem(3);
+    // width: rem(100);
+  }
+}

@@ -1,0 +1,6 @@
+.l-sub-business{
+  padding-bottom: rem(124);
+  @include mq(md) {
+    padding-bottom: rem(150);
+  }
+}

@@ -1,0 +1,92 @@
+.p-sub-visual {
+  position: relative;
+  padding-top: calc(375 / 425 * 100%);
+  padding-top: rem(425);
+  display: block;
+  width: 100%;
+  @include mq(md) {
+    // height: rem(370);
+    padding-top: 28.90625%;
+  }
+}
+
+.p-sub-visual__body {
+  font-size: rem(30);
+  font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: rem(2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    font-size: rem(36);
+    // transform: translate(-50%, -50%);
+  }
+}
+
+.p-sub-visual::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* デフォルト投稿「ブログ」アーカイブページの背景画像 */
+.p-sub-visual.--blogs::before {
+  background: url(../img/blog/blog-img.jpg) no-repeat center / cover ;
+  @include mq(md) {
+    background: url(../img/blog/blog-img_pc.jpg) no-repeat 100% / cover ;
+  }
+}
+/* 「お知らせ」アーカイブページの背景画像 */
+.p-sub-visual.--news::before {
+  background: url(../img/news/news-bg.png) no-repeat center / cover ;
+  @include mq(md) {
+    background: url(../img/news/news-bg_pc.png) no-repeat 100% / cover ;
+  }
+}
+/* 「制作実績」アーカイブページとタクソノミーページの背景画像 */
+.p-sub-visual.--products::before {
+  background: url(../img/products/products-bg.png) no-repeat center / cover ;
+  @include mq(md) {
+    background: url(../img/products/products-bg_pc.png) no-repeat 100% / cover ;
+  }
+}
+
+/* 「事業内容」ページの背景画像 */
+.p-sub-visual.--business::before {
+  background: url(../img/business/business-bg.png) no-repeat center / cover ;
+  @include mq(md) {
+    background: url(../img/business/business-bg_pc.png) no-repeat 100% / cover ;
+  }
+}
+/* 「企業概要」ページの背景画像 */
+.p-sub-visual.--profile::before {
+  background: url(../img/profile/profile-bg.png) no-repeat center / cover ;
+  @include mq(md) {
+    background: url(../img/profile/profile-bg_pc.png) no-repeat 100% / cover ;
+  }
+}
+/* 「企業概要」ページの背景画像 */
+.p-sub-visual.--contact::before {
+  background: url(../img/contact/contact-bg.png) no-repeat center / cover ;
+  @include mq(md) {
+    background: url(../img/contact/contact-bg_pc.png) no-repeat 100% / cover ;
+  }
+}
+
+
+//画像マスク
+.p-sub-visual::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.2);
+  z-index: -1;
+}

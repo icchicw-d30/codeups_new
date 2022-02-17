@@ -1,0 +1,151 @@
+/**
+ *
+ * 管理画面編集用scss
+ * .post-type-post で投稿を指定
+ *
+ **/
+
+
+ /////////////////////////////
+//
+// デフォルト投稿編集画面のスタイル
+//
+/////////////////////////////
+.post-type-post .editor-styles-wrapper,
+.post-type-news .editor-styles-wrapper {
+  background-color: #555;
+  color: #FFF;
+}
+.post-type-post .editor-styles-wrapper h2,
+.post-type-news .editor-styles-wrapper h2 {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: calc( 2 / 24 * 1rem);
+  padding: 5px 0 5px 9px;
+  position: relative;
+}
+.post-type-post .editor-styles-wrapper h2::before,
+.post-type-news .editor-styles-wrapperh2::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #C4C4C4;
+  width: 3px;
+  height: 100%;
+}
+
+.post-type-post .editor-styles-wrapper h3,
+.post-type-news .editor-styles-wrapper h3{
+  font-size: 18px;
+  letter-spacing: calc( 2 / 18 * 1rem);
+  // display: inline-block;
+  display: block;
+  position: relative;
+}
+
+.post-type-post .editor-styles-wrapper h3::after,
+.post-type-news .editor-styles-wrapper h3::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, #FFF, #FFF 67%, #FFEA2E 67%, #FFEA2E 100%);
+  left: 0;
+  // bottom: -3px;
+  top: 28px;
+}
+
+.post-type-post .editor-styles-wrapper ul,
+.post-type-post .editor-styles-wrapper ol,
+.post-type-news .editor-styles-wrapper ul,
+.post-type-news .editor-styles-wrapper ol {
+  // color: red;
+}
+
+
+/////////////////////////////
+//
+// 管理画面 追加したセパレーター
+//
+/////////////////////////////
+#adminmenu li.menu-top.toplevel_page_wp-menu-separator3 {
+  height: 1px;
+  max-height: 1px;
+  min-height: initial;
+  margin-top: 10px;
+}
+
+////////////////
+//
+// SCF関係の調整
+//
+////////////////
+
+/* MVスライダーのレイアウト調整 */
+// .toplevel_page_mv_slider .smart-cf-field-type-image:first-of-type {
+//   display: inline-block;
+// }
+// .toplevel_page_mv_slider .smart-cf-field-type-image:nth-of-type(2) {
+//   position: relative;
+//   display: inline-block;
+//   top: -360px;
+//   right: -50%;
+//   margin-bottom: -20%;
+// }
+
+///////////////////////////////////////////////////
+//
+// 繰り返しフィールド個数制限（＋ボタン消去）
+//
+//////////////////////////////////////////////////
+/* 事業内容ページ 繰り返し3つ目の＋ボタン消去 ※nth-childの値は場合により変動します！ */
+#smart-cf-custom-field-316 .smart-cf-meta-box .smart-cf-meta-box-repeat-tables .smart-cf-meta-box-table:nth-child(5) .dashicons-plus-alt.smart-cf-repeat-btn {
+  display: none;
+}
+/* 制作実績ページ 繰り返し8つ目の＋ボタン消去 ※nth-childの値は場合により変動します！ */
+#smart-cf-custom-field-121 .smart-cf-meta-box .smart-cf-meta-box-repeat-tables .smart-cf-meta-box-table:nth-child(10) .dashicons-plus-alt.smart-cf-repeat-btn {
+  display: none;
+}
+
+
+///////////////////////////////////////////////////
+//
+// 事業内容 管理画面SCF繰り返しフィールド
+//
+//////////////////////////////////////////////////
+/* 事業内容 管理画面SCF繰り返しフィールドの上に追加した要素 */
+.c-scf-attention {
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(249, 249, 113, 0.7);
+  margin-top: 0;
+  padding: 10px 0;
+}
+.c-scf-attention span {
+  display: inline-block;
+}
+
+
+
+///////////////////////////////////////////////////
+//
+// 【SCFオプションページ】 MVスライダー画面
+//
+//////////////////////////////////////////////////
+/* 画像フレックス */
+@media screen and (min-width: 768px) {
+  .smart-cf-field-type-image__wrapper {
+    display: flex;
+  }
+}
+/* デフォルトで左側にあるサブタイトル **myadmin.jsで位置とタグ変更済み** */
+.toplevel_page_mv_slider__subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  font-size: rem(100);
+}
+

@@ -1,0 +1,11 @@
+.p-section-title-box {
+  position: relative;
+  text-align: center;
+
+  @include mq(md) {
+    max-width: rem(1280);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

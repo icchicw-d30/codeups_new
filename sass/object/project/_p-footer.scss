@@ -1,0 +1,146 @@
+.p-footer {
+
+}
+
+.p-footer__inner.l-inner {
+  @include mq(md) {
+    // max-width: rem(1280);
+    width: 100%;
+    // height: rem(35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 0 rem(32);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(1266);
+    height: initial;
+  }
+}
+
+.p-footer__logo {
+  width: rem(70);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+
+  @include mq(md) {
+    height: inherit;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
+
+.p-footer__logo a:hover img {
+  opacity: .8;
+}
+
+.p-footer__logo img {
+  height: 100%;
+  transition: opacity .3s;
+}
+
+.p-footer__menu {
+  margin-top: rem(12);
+  @include mq(md) {
+    margin-top: inherit;
+  }
+
+}
+
+.p-footer__items {
+  text-align: center;
+
+  @include mq(md) {
+    height: inherit;
+    display: flex;
+  }
+}
+
+.p-footer__item {
+  // margin-top: rem(12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include mq(md) {
+    margin-top: 0;
+    height: inherit;
+  }
+}
+
+
+.p-footer__item + .p-footer__item {
+  margin-top: rem(7.5);
+  @include mq(md) {
+    margin-top: initial;
+    margin-left: rem(29);
+  }
+}
+
+.p-footer__item:first-child {
+  @include mq(md) {
+    display: none;
+  }
+}
+.p-footer__item:nth-of-type(2) {
+  @include mq(md) {
+    margin-left: initial;
+  }
+}
+
+.p-footer-item__link {
+  letter-spacing: rem(1.2);
+  line-height: calc(23 / 16);
+  position: relative;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(35 / 16);
+    letter-spacing: rem(2);
+  }
+}
+.p-footer-item__link::after {
+  position: absolute;
+  content: '';
+  background: #ffea2e;
+  width: 100%;
+  height: 1px;
+  bottom: rem(0);
+  left: 0;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .4s;
+}
+.p-footer-item__link:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.p-footer__copyright {
+  text-align: center;
+  margin-top: rem(35);
+  margin-left: rem(4);
+
+  @include mq(md) {
+    margin-top: rem(85);
+  }
+}
+
+
+.p-footer-item--news {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-footer-item--works {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}

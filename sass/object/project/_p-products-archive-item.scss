@@ -1,0 +1,74 @@
+.p-products-archive-item{
+  position: relative;
+}
+
+.p-products-archive-item__img {
+  position: relative;
+  // width: 100%;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  overflow: hidden;
+  @include mq(md) {
+    margin: initial;
+    width: initial;
+  }
+}
+
+.p-products-archive-item__img::before {
+  content: '';
+  display: block;
+  padding-top: calc( 249 / 375 * 100%);
+  @include mq(md) {
+    padding-top: calc( 349 / 525 * 100%);
+  }
+}
+
+.p-products-archive-item__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  //ホバー時に画像拡大用のtransition
+  transition: width .3s, height .3s;
+  overflow: hidden;
+
+}
+
+//ホバー時に画像拡大
+.p-products-archive__link:hover .p-products-archive-item__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-products-archive-item__tag{
+  position: absolute;
+  content: '';
+  display: inline-block;
+  right: rem(-20);
+  top: rem(-1);
+  @include mq(md) {
+    right: 0;
+  }
+}
+
+.p-products-archive-item__title{
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: calc(35 / 20);
+  letter-spacing: rem(2);
+  text-align: center;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(12);
+  }
+}

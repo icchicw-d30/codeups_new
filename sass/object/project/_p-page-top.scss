@@ -1,0 +1,11 @@
+.p-page-top {
+  position: fixed;
+  right: rem(20);
+  bottom: rem(40);
+  z-index: 10;
+  display: none; //非表示デフォルト
+  @include mq(md) {
+    right: rem(32);
+    bottom: rem(27);
+  }
+}
