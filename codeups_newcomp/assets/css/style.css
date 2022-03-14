@@ -2019,6 +2019,7 @@ summary {
 }
 
 .p-blog-item__footer {
+  align-items: end;
   display: flex;
   font-size: 0.875rem;
   justify-content: space-between;
