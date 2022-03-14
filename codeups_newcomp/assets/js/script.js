@@ -218,68 +218,14 @@ jQuery(function ($) {
 			$('.p-products-thumbs__img').width(thumbsImgWidth - thumbsMargin); // サムネイル画像の幅から1サムネイル画像あたりのマージン値を引いた値を再代入する
 		}
 	});
-	// /* サムネイル連動(サムネイルは固定) */
-	// //サムネイル
-	// var thumbs = new Swiper ('.gallery-thumbs', {
-	// 	spaceBetween: 24,
-	// 	slidesPerView: thumsSlides.length,
-	// 	watchSlidesVisibility: true,
-	// 	watchSlidesProgress: true,
-	// 	breakpoints: {
-	// 		// when window width is >= 320px
-	// 		320: {
-	// 		centeredSlides: true,
-	// 		},
-	// 		// when window width is >= 768px
-	// 		768: {
-	// 			// centeredSlides: false,
-	// 			spaceBetween: 8,
-	// 		}
-	// 	}
-	// });
-	// //メイン
-	// var mainSlider = new Swiper ('.gallery-slider', {
-	// 	loop: true,
-	// 	loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
-	// 	effect:'fade',    
-	// 	fadeEffect:{
-	// 		crossFade:true
-	// 	},
-	// 	navigation: {
-	// 			nextEl: '.swiper-button-next',
-	// 			prevEl: '.swiper-button-prev',
-	// 	},
-	// 	thumbs: {
-	// 		swiper: thumbs
-	// 	}
-	// });
-
-	/* サムネイル連動(サムネイルも連動) */
-		//メイン
-		var mainSlider = new Swiper ('.gallery-slider', {
-			loop: true,
-			loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
-			effect:'fade',    
-			fadeEffect:{
-				crossFade:true
-			},
-			navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-			},
-		});
+	
+	/* サムネイル連動(サムネイルは固定) */
 	//サムネイル
 	var thumbs = new Swiper ('.gallery-thumbs', {
-		slidesPerView: 'auto',
 		spaceBetween: 24,
-		// centeredSlides: true,
-		loop: true,
-		loopedSlides: thumsSlides.length,
-		slideToClickedSlide: true,
-		controller:{
-			control: mainSlider
-		},
 		slidesPerView: thumsSlides.length,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
@@ -292,13 +238,68 @@ jQuery(function ($) {
 			}
 		}
 	});
-	mainSlider.on('sliderChangeTransitionEnd', () => {
-		const mainModulo = mainSlider.activeIndex%mainSlides.length;
-		const thumbsModulo = thumbs.activeIndex%thumsSlides.length;
-		if( mainModulo !== thumbsModulo ) {
-			thumbs.slideToLoop( mainModulo );
+	//メイン
+	var mainSlider = new Swiper ('.gallery-slider', {
+		loop: true,
+		loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
+		effect:'fade',    
+		fadeEffect:{
+			crossFade:true
+		},
+		navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: thumbs
 		}
 	});
+
+	// /* サムネイル連動(サムネイルも連動) */
+	// //メイン
+	// var mainSlider = new Swiper ('.gallery-slider', {
+	// 	loop: true,
+	// 	loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
+	// 	effect:'fade',    
+	// 	fadeEffect:{
+	// 		crossFade:true
+	// 	},
+	// 	navigation: {
+	// 			nextEl: '.swiper-button-next',
+	// 			prevEl: '.swiper-button-prev',
+	// 	},
+	// });
+	// //サムネイル
+	// var thumbs = new Swiper ('.gallery-thumbs', {
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 24,
+	// 	// centeredSlides: true,
+	// 	loop: true,
+	// 	loopedSlides: thumsSlides.length,
+	// 	slideToClickedSlide: true,
+	// 	controller:{
+	// 		control: mainSlider
+	// 	},
+	// 	slidesPerView: thumsSlides.length,
+	// 	breakpoints: {
+	// 		// when window width is >= 320px
+	// 		320: {
+	// 		centeredSlides: true,
+	// 		},
+	// 		// when window width is >= 768px
+	// 		768: {
+	// 			// centeredSlides: false,
+	// 			spaceBetween: 8,
+	// 		}
+	// 	}
+	// });
+	// mainSlider.on('sliderChangeTransitionEnd', () => {
+	// 	const mainModulo = mainSlider.activeIndex%mainSlides.length;
+	// 	const thumbsModulo = thumbs.activeIndex%thumsSlides.length;
+	// 	if( mainModulo !== thumbsModulo ) {
+	// 		thumbs.slideToLoop( mainModulo );
+	// 	}
+	// });
 
 	//4系～
 	//メインとサムネイルを紐づける

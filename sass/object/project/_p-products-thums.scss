@@ -55,7 +55,8 @@
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
-.p-products-thumbs__img.swiper-slide-thumb-active::after,
-.p-products-thumbs__img.swiper-slide-active::after {
+.p-products-thumbs__img.swiper-slide-thumb-active::after
+// .p-products-thumbs__img.swiper-slide-active::after 
+{
   display: none;
 }
