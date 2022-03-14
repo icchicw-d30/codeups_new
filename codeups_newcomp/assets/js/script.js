@@ -304,13 +304,7 @@ jQuery(function ($) {
 	//メインとサムネイルを紐づける
 	slider.controller.control = thumbs;
 	thumbs.controller.control = slider;
-	// slider.on('slideChangeTransitionEnd',()=>{
-  //   const mainModulo = slider.activeIndex%mainSlides.length;
-  //   const thumbModulo = thumb.activeIndex%thumbSlides.length;
-  //   if( mainModulo != thumbModulo){
-  //     thumb.slideToLoop(mainModulo);
-  //   }
-  // });
+
 
 
 	/* メインビジュアルスライダー設定 */
