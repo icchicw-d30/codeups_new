@@ -203,9 +203,10 @@ jQuery(function ($) {
 
 	/* swiper設定 制作実績 */
 	//メイン
-	const mainSlides = document.getElementsByClassName('p-products-gallery__img');
-	const thumsSlides = document.getElementsByClassName('p-products-thumbs__img');
-	// *PC時のみ使用する変数*
+	const mainSlides = document.getElementsByClassName('js-products-gallery-img');
+	//サムネイル
+	const thumsSlides = document.getElementsByClassName('js-products-thumbs-img');
+	// ***PC時のみ使用する変数***
 	//サムネイル画像の幅
 	const thumbsWidth = 100 / mainSlides.length; // 「100 / サムネイル数」  *** %は使えないので、％は後で付与する
 	//1サムネイル画像あたりのマージン値の計算 *** pxは使えない
@@ -213,17 +214,17 @@ jQuery(function ($) {
 	$(window).on('load resize', function() { 
 		var w = $(this).width();
 		if( w > 767 ) { // PC時のみ
-			$('.p-products-thumbs__img').width( thumbsWidth + '%'); // 最初にサムネイル画像の幅を％で計算し、代入する
-			var thumbsImgWidth = $('.p-products-thumbs__img').width(); // 上記の値を変数に入れる。このままだとマージンを考慮してないので右端の画像が途切れる
-			$('.p-products-thumbs__img').width(thumbsImgWidth - thumbsMargin); // サムネイル画像の幅から1サムネイル画像あたりのマージン値を引いた値を再代入する
+			$('.js-products-thumbs-img').width( thumbsWidth + '%'); // 最初にサムネイル画像の幅を％で計算し、代入する
+			var thumbsImgWidth = $('.js-products-thumbs-img').width(); // 上記の値を変数に入れる。このままだとマージンを考慮してないので右端の画像が途切れる
+			$('.js-products-thumbs-img').width(thumbsImgWidth - thumbsMargin); // サムネイル画像の幅から1サムネイル画像あたりのマージン値を引いた値を再代入する
 		}
 	});
-	
+
 	/* サムネイル連動(サムネイルは固定) */
 	//サムネイル
-	var thumbs = new Swiper ('.gallery-thumbs', {
-		spaceBetween: 24,
-		slidesPerView: thumsSlides.length,
+	var thumbs = new Swiper ('.js-gallery-thumbs', {
+		spaceBetween: 24,	
+		slidesPerView: thumsSlides.length, 
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
@@ -239,10 +240,10 @@ jQuery(function ($) {
 		}
 	});
 	//メイン
-	var mainSlider = new Swiper ('.gallery-slider', {
+	var mainSlider = new Swiper ('.js-gallery-slider', {
 		loop: true,
 		loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
-		effect:'fade',    
+		effect:'fade', //スライドのエフェクト
 		fadeEffect:{
 			crossFade:true
 		},
@@ -250,14 +251,14 @@ jQuery(function ($) {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 		},
-		thumbs: {
+		thumbs: { //サムネイルの連動設定
 			swiper: thumbs
 		}
 	});
 
 	// /* サムネイル連動(サムネイルも連動) */
 	// //メイン
-	// var mainSlider = new Swiper ('.gallery-slider', {
+	// var mainSlider = new Swiper ('.js-gallery-slider', {
 	// 	loop: true,
 	// 	loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
 	// 	effect:'fade',    
@@ -270,7 +271,7 @@ jQuery(function ($) {
 	// 	},
 	// });
 	// //サムネイル
-	// var thumbs = new Swiper ('.gallery-thumbs', {
+	// var thumbs = new Swiper ('.js-gallery-thumbs', {
 	// 	slidesPerView: 'auto',
 	// 	spaceBetween: 24,
 	// 	// centeredSlides: true,
@@ -303,8 +304,8 @@ jQuery(function ($) {
 
 	//4系～
 	//メインとサムネイルを紐づける
-	slider.controller.control = thumbs;
-	thumbs.controller.control = slider;
+	// slider.controller.control = thumbs;
+	// thumbs.controller.control = slider;
 
 
 
