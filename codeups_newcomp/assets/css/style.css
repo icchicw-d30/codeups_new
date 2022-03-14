@@ -3947,6 +3947,24 @@ summary {
   width: 100%;
 }
 
+.p-products-thumbs__img::after {
+  background: rgba(0, 0, 0, 0.7);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+}
+
+.p-products-thumbs__img.swiper-slide-thumb-active::after,
+.p-products-thumbs__img.swiper-slide-active::after {
+  display: none;
+}
+
 .p-profile-overview-item {
   display: flex;
   flex-wrap: wrap;

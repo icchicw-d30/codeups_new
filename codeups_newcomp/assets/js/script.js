@@ -218,40 +218,85 @@ jQuery(function ($) {
 			$('.p-products-thumbs__img').width(thumbsImgWidth - thumbsMargin); // サムネイル画像の幅から1サムネイル画像あたりのマージン値を引いた値を再代入する
 		}
 	});
-	var slider = new Swiper ('.gallery-slider', {
-		// slidesPerView: 1,
-		// centeredSlides: true,
-		// freeMode: true,
-		loop: true,
-		loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
-		navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-		},
-		thumbs: {
-			swiper: thumbs
-		}
-	});
+	// /* サムネイル連動(サムネイルは固定) */
+	// //サムネイル
+	// var thumbs = new Swiper ('.gallery-thumbs', {
+	// 	spaceBetween: 24,
+	// 	slidesPerView: thumsSlides.length,
+	// 	watchSlidesVisibility: true,
+	// 	watchSlidesProgress: true,
+	// 	breakpoints: {
+	// 		// when window width is >= 320px
+	// 		320: {
+	// 		centeredSlides: true,
+	// 		},
+	// 		// when window width is >= 768px
+	// 		768: {
+	// 			// centeredSlides: false,
+	// 			spaceBetween: 8,
+	// 		}
+	// 	}
+	// });
+	// //メイン
+	// var mainSlider = new Swiper ('.gallery-slider', {
+	// 	loop: true,
+	// 	loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
+	// 	effect:'fade',    
+	// 	fadeEffect:{
+	// 		crossFade:true
+	// 	},
+	// 	navigation: {
+	// 			nextEl: '.swiper-button-next',
+	// 			prevEl: '.swiper-button-prev',
+	// 	},
+	// 	thumbs: {
+	// 		swiper: thumbs
+	// 	}
+	// });
 
+	/* サムネイル連動(サムネイルも連動) */
+		//メイン
+		var mainSlider = new Swiper ('.gallery-slider', {
+			loop: true,
+			loopedSlides: mainSlides.length, //スライドの枚数と同じ値を指定
+			effect:'fade',    
+			fadeEffect:{
+				crossFade:true
+			},
+			navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+			},
+		});
 	//サムネイル
 	var thumbs = new Swiper ('.gallery-thumbs', {
 		slidesPerView: 'auto',
 		spaceBetween: 24,
-		centeredSlides: true,
+		// centeredSlides: true,
 		loop: true,
 		loopedSlides: thumsSlides.length,
 		slideToClickedSlide: true,
-
+		controller:{
+			control: mainSlider
+		},
+		slidesPerView: thumsSlides.length,
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-
+			centeredSlides: true,
 			},
 			// when window width is >= 768px
 			768: {
-				centeredSlides: false,
+				// centeredSlides: false,
 				spaceBetween: 8,
 			}
+		}
+	});
+	mainSlider.on('sliderChangeTransitionEnd', () => {
+		const mainModulo = mainSlider.activeIndex%mainSlides.length;
+		const thumbsModulo = thumbs.activeIndex%thumsSlides.length;
+		if( mainModulo !== thumbsModulo ) {
+			thumbs.slideToLoop( mainModulo );
 		}
 	});
 
@@ -259,6 +304,13 @@ jQuery(function ($) {
 	//メインとサムネイルを紐づける
 	slider.controller.control = thumbs;
 	thumbs.controller.control = slider;
+	// slider.on('slideChangeTransitionEnd',()=>{
+  //   const mainModulo = slider.activeIndex%mainSlides.length;
+  //   const thumbModulo = thumb.activeIndex%thumbSlides.length;
+  //   if( mainModulo != thumbModulo){
+  //     thumb.slideToLoop(mainModulo);
+  //   }
+  // });
 
 
 	/* メインビジュアルスライダー設定 */
