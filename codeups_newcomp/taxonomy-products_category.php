@@ -6,7 +6,7 @@
   <div class="p-sub-visual__image">
     <!-- <img src="" alt="ビジュアルイメージ"> -->
   </div>
-  <p class="p-sub-visual__body">制作実績タクソノミー</p><!-- /.p-sub-visual__body -->
+  <p class="p-sub-visual__body">制作実績</p><!-- /.p-sub-visual__body -->
 </div>
 
 <section class="l-sub-products-archive p-sub-products-archive">
