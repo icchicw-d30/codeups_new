@@ -37,16 +37,17 @@
     <?php endif; ?> -->
 
     <div class="p-sub-products__gallery p-products-gallery">                
-      <div class="swiper gallery-slider p-products-gallery__slider">
+      <div class="swiper js-gallery-slider p-products-gallery__slider">
         <!-- メイン -->
         <div class="swiper-wrapper p-products-gallery__wrapper">
           <?php 
             $galleryImgGroup = SCF::get('galleryImgGroup');
             foreach( $galleryImgGroup as $galleryFields ) :
               $galleryUrl = wp_get_attachment_image_src( $galleryFields['gallery_img'], 'large' );
+              $galleryAlt = $galleryFields['gallery_imgAlt'];
           ?>
-          <div class="swiper-slide p-products-gallery__img">
-            <img src="<?php echo $galleryUrl[0]; ?>" alt="制作イメージ">
+          <div class="swiper-slide p-products-gallery__img js-products-gallery-img">
+            <img src="<?php echo $galleryUrl[0]; ?>" alt="<?php if( $galleryAlt ) { echo $galleryAlt; } else { echo '制作イメージ'; } ?>">
           </div>
           <?php endforeach; ?>
         </div>
@@ -54,15 +55,15 @@
         <div class="swiper-button-next"></div>
       </div>
       <!-- サムネイル -->
-      <div class="swiper gallery-thumbs p-products-thumbs">
+      <div class="swiper js-gallery-thumbs p-products-thumbs">
         <div class="swiper-wrapper p-products-thumbs__wrapper">
           <?php 
             $galleryImgGroup = SCF::get('galleryImgGroup');
             foreach( $galleryImgGroup as $galleryFields ) :
               $galleryUrl = wp_get_attachment_image_src( $galleryFields['gallery_img']);
           ?>
-          <div class="swiper-slide p-products-thumbs__img">
-            <img src="<?php echo $galleryUrl[0]; ?>" alt="制作実績イメージ">
+          <div class="swiper-slide p-products-thumbs__img js-products-thumbs-img">
+            <img src="<?php echo $galleryUrl[0]; ?>" alt="制作実績イメージのサムネイル">
           </div>
           <?php endforeach; ?>
         </div>
