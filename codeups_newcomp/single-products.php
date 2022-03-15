@@ -60,7 +60,7 @@
           <?php 
             $galleryImgGroup = SCF::get('galleryImgGroup');
             foreach( $galleryImgGroup as $galleryFields ) :
-              $galleryUrl = wp_get_attachment_image_src( $galleryFields['gallery_img']);
+              $galleryUrl = wp_get_attachment_image_src( $galleryFields['gallery_img'], 'full');
           ?>
           <div class="swiper-slide p-products-thumbs__img js-products-thumbs-img">
             <img src="<?php echo $galleryUrl[0]; ?>" alt="制作実績イメージのサムネイル">
