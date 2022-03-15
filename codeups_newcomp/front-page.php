@@ -146,22 +146,6 @@ if ( isset($_POST['windowSize']) ){
         </li>
         <?php $i++; ?>
         <?php endforeach; ?>
-        <!-- <li class="p-top-content__item p-content-item">
-          <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'business' )->ID ) ); ?>#business-content2" class="p-content-item__link">
-            <div class="p-content-item__image">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/img/content/content02.jpg" alt="事業内容イメージ">
-            </div>
-            <p class="p-content-item__body">理念2へ</p>
-          </a>
-        </li>
-        <li class="p-top-content__item p-content-item">
-          <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'business' )->ID ) ); ?>#business-content3" class="p-content-item__link">
-            <div class="p-content-item__image">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/img/content/content03.jpg" alt="事業内容イメージ">
-            </div>
-            <p class="p-content-item__body">理念3へ</p>
-          </a>
-        </li> -->
       </ul>
     </div>
   </section>
@@ -205,7 +189,7 @@ if ( isset($_POST['windowSize']) ){
               <div class="p-top-works__image p-top-contentBox__image">
                 <?php
                 // 選択した関連する投稿のアイキャッチ画像URLを取得
-                $thumbUrl = get_the_post_thumbnail_url($products_id);
+                $thumbUrl = get_the_post_thumbnail_url($products_id, 'full');
                 //それぞれの投稿IDに紐づいた画像グループを取得
                 $galleryImgGroup = SCF::get('galleryImgGroup', $products_id);
                 //画像グループ内の画像を取得して1つづつ取り出す
