@@ -2,27 +2,6 @@
 
 <section class="l-blog-detail p-blog-detail">
 
-  <!-- <div class="p-blog-detail__inner">
-
-   
-    <div class="p-breadcrumb">
-      <div class="p-breadcrumb__inner">
-        <ul class="p-blog-detail__breadcrumb-items p-breadcrumb-items">
-          <li class="p-blog-detail__breadcrumb-item p-breadcrumb-item">
-            <a href="<?php esc_url( home_url() ); ?>" class="p-breadcrumb-item__link">ホーム</a>
-          </li>
-          <li class="p-blog-detail__breadcrumb-item p-breadcrumb-item">
-            <a href="" class="p-breadcrumb-item__link">ブログ記事一覧</a>
-          </li>
-          <li class="p-blog-detail__breadcrumb-item p-breadcrumb-item">
-            ブログ記事詳細
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </div> -->
-
   <div class="p-breadcrumb">
     <div class="p-breadcrumb__inner l-inner">
       <?php bcn_display(); //BreadcrumbNavXTのパンくずを表示するための記述 ?>
