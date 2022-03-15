@@ -348,17 +348,6 @@ jQuery(function ($) {
 	});
 
 
-
-	/* パンくずリストのタイトル変更 */
-	// 「お知らせ」アーカイブの「お知らせ」を変更
-	$('.p-breadcrumb.p-breadcrumb--news .post-news-archive').text('お知らせ一覧');
-	// 「お知らせ」記事ページの「（タイトル）」を変更
-	$('.p-breadcrumb.p-breadcrumb--news .post-news').text('お知らせ詳細');
-	// 「制作実績」シングルページの「（タイトル）」を変更
-	$('.p-breadcrumb.p-breadcrumb--products .post-products').text('制作実績詳細');
-
-	// $('.p-breadcrumb.p-breadcrumb--products .post-news').text('お知らせ詳細');
-
 	/* contact form 7 のエラーメッセージを移動 */
 	$('.wpcf7-response-output').prependTo('.p-contact-form__items');
 
