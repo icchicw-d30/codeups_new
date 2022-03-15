@@ -33,9 +33,9 @@
             $terms = get_terms('news_category');
             foreach( $terms as $term ) :
             ?>
-            <div class="p-news-item__tag c-tag">
+            <a class="p-news-item__tag c-tag" href="<?php echo esc_url( get_term_link($term, 'news_category') ); ?>">
               <?php echo $term->name; ?>
-            </div>
+            </a>
             <?php endforeach; ?>
           </div>
           <a href="<?php the_permalink(); ?>" class="p-news-item__link">
