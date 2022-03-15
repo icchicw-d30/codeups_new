@@ -25,7 +25,6 @@ if ( isset($_POST['windowSize']) ){
           $mv_img_sp_id = $item['mv_slider_img_sp'];
           $mv_img_sp_src = wp_get_attachment_url($mv_img_sp_id);
           //alt
-          // $alt_pc = get_post_meta($mv_img_pc_id, '_wp_attachment_image_alt', true);
           $alt_pc = $item['mv_slider_alt'];
           //タイトル
           $mv_slider_title = $item['mv_slider_title'];
@@ -39,7 +38,6 @@ if ( isset($_POST['windowSize']) ){
             <picture>
               <source srcset="<?php echo $mv_img_pc_src;?>" media="(min-width: 768px)" /><!-- 幅768px以上なら表示 -->
               <img src="<?php echo $mv_img_sp_src;?>" alt="<?php if($alt_pc){echo $alt_pc;} else {echo 'メインビジュアル';}?>" />
-              <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/mv01.jpg" alt="メインビジュアル1"> -->
             </picture>
           </div>
           <div class="p-main-visual__block">
@@ -124,7 +122,6 @@ if ( isset($_POST['windowSize']) ){
             ?>
             <div class="p-content-item__image">
               <img src="<?php echo $businessTopImgUrl[0]; ?>" alt="事業内容イメージ">
-              <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/img/content/content00.jpg" alt="事業内容イメージ"> -->
             </div>
             <p class="p-content-item__body">経営理念ページへ</p>
           </a>
@@ -139,7 +136,6 @@ if ( isset($_POST['windowSize']) ){
           <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'business' )->ID ) ); ?>#business-content<?php echo $i; ?>" class="p-content-item__link">
             <div class="p-content-item__image">
               <img src="<?php echo $imgUrl[0]; ?>" alt="事業内容イメージ">
-              <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/img/content/content01.jpg" alt="事業内容イメージ"> -->
             </div>
             <p class="p-content-item__body">理念<?php echo $i; ?>へ</p>
           </a>
@@ -243,7 +239,6 @@ if ( isset($_POST['windowSize']) ){
         ?>
         <div class="p-top-overview__image p-top-contentBox__image">
           <img src="<?php echo $profileTopImgUrl[0]; ?>" alt="企業概要イメージ">
-          <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/img/overview/overview.jpg" alt="企業概要イメージ"> -->
         </div>
         <div class="p-top-overview__box p-top-contentBox__box p-top-contentBox__box--reverse">
           <p class="p-top-overview__title p-top-contentBox__title"><?php echo $profile_top_title; ?></p>
