@@ -24,7 +24,7 @@
         $category_link = get_category_link( $categories[0]->term_id );
         foreach ($categories as $category) :
       ?>
-      <a class="p-blog-detail__tag c-tag" href="<?php echo $category_link; ?>">
+      <a class="p-blog-detail__tag c-tag c-tag--btn" href="<?php echo $category_link; ?>">
         <?php echo $category->name; // カテゴリー名 ?>
       </a>
       <?php endforeach; endif; ?>
