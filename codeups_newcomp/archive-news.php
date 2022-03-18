@@ -33,7 +33,7 @@
             $terms = get_terms('news_category');
             foreach( $terms as $term ) :
             ?>
-            <a class="p-news-item__tag c-tag" href="<?php echo esc_url( get_term_link($term, 'news_category') ); ?>">
+            <a class="p-news-item__tag c-tag c-tag--btn" href="<?php echo esc_url( get_term_link($term, 'news_category') ); ?>">
               <?php echo $term->name; ?>
             </a>
             <?php endforeach; ?>

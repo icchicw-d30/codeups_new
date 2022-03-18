@@ -1212,6 +1212,7 @@ summary {
   font-size: 0.875rem;
   letter-spacing: 0;
   line-height: calc(20 / 14);
+  overflow: hidden;
   padding: 0.25rem 1.25rem 0.3125rem;
   text-align: center;
 }
@@ -1221,6 +1222,35 @@ summary {
     font-size: 0.875rem;
     padding: 0.25rem 1.3125rem;
   }
+}
+
+.c-tag--btn {
+  position: relative;
+  transition: all .3s;
+  z-index: 1;
+}
+
+.c-tag--btn::before {
+  background-color: #fff;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  transition: ease .3s;
+  width: 100%;
+  z-index: -1;
+}
+
+.c-tag--btn:hover {
+  color: #333;
+  z-index: 1;
+}
+
+.c-tag--btn:hover::before {
+  transform: translateX(0);
+  z-index: -1;
 }
 
 .c-term {

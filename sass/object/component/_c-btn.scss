@@ -58,11 +58,9 @@
 .c-btn:hover {
   color: #333;
   z-index: 1;
-
 }
 .c-btn:hover::before {
   transform: translateX(0);
   z-index: -1;
   // overflow: hidden;
-
 }

@@ -70,14 +70,14 @@ if ( isset($_POST['windowSize']) ){
               <div class="p-info-item__head">
                 <time class="p-info-item__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.n.j'); ?></time>
                   <!-- カテゴリー -->
-                  <p class="p-info-item__tag c-tag">
-                    <?php
+                  <?php
                     $terms = get_terms('news_category');
-                    foreach ($terms as $term) {
-                      echo $term->name;
-                    }
-                    ?>
-                  </p>
+                    foreach ($terms as $term) :
+                  ?>
+                  <a class="p-info-item__tag c-tag c-tag--btn" href="<?php echo esc_url( get_term_link($term) ); ?>">
+                    <?php echo $term->name; ?>
+                  </a>
+                  <?php endforeach; ?>
               </div>
               <!-- タイトル -->
               <a href="<?php the_permalink(); ?>" class="p-info-item__link">
